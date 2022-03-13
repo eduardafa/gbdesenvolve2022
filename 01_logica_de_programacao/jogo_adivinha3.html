@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+    function sorteia(numero) {
+        var numeroPensado = Math.round(Math.random()*numero);
+        return numeroPensado;
+    }  
+
+    var numeroPensado = sorteia(10);
+    var chanceLim = 3;
+    var chance = 0;
+
+    while (chance < chanceLim) {
+        chance++;
+        var chute = parseInt(prompt("Chute um número!"));
+        if (chute == numeroPensado) {
+            mostra("Parabéns! Você acertou! O número que eu pensei era o " + numeroPensado + "!");
+            break
+        } else {
+            if (chance < chanceLim) {
+                if (chute < numeroPensado) {
+                    alert("Você errou! O número certo é MAIOR do que seu palpite.")
+                } else if (chute > numeroPensado) {
+                    alert("Você errou! O número certo é MENOR do que seu palpite.")
+                }
+                //alert("Você errou! Tente novamente!");
+            } else {
+                alert("Você errou novamente e suas tentativas se esgotaram! O número que eu pensei era o " + numeroPensado + "!");
+            }
+            
+        }
+    }
+
+    mostra("Fim!");
+
+</script>   

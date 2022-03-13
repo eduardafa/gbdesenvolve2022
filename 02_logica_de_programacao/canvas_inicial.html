@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+    
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+
+    pincel.fillStyle = "lightgrey"; //não é uma função, mas recebe uma atribuição (red/lightgrey/yellow/black/green)
+    pincel.fillRect(0,0,600,400); //preencher um retângulo dando as coordenadas de entrada (inicio e fim)
+    
+    pincel.fillStyle = "green";
+    pincel.fillRect(0,0,200,400);
+
+    pincel.fillStyle = "red";
+    pincel.fillRect(400,0,600,400);
+
+    pincel.fillStyle = "yellow";
+    pincel.beginPath(); //defino que um "caminho" vai ser criado
+    pincel.moveTo(300,200);
+    pincel.lineTo(200,400);
+    pincel.lineTo(400,400);
+    pincel.fill(); //preenchimento
+
+    pincel.fillStyle = "blue";
+    pincel.beginPath();
+    pincel.arc(300,200,50,0,2*3.14);
+    pincel.fill();
+    
+</script>

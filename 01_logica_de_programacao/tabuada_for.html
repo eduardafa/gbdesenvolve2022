@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function mostra(texto) {
+        document.write(texto + "<br>");
+    }
+
+    function tabuada(numTabuada,multiplicador) {
+        return (numTabuada*multiplicador);
+    }
+
+    var numTabuada = parseInt(prompt("Qual tabuada você quer ver?"));
+    var multiplicador = 1;
+
+    for (multiplicador; multiplicador <= 10; multiplicador++) {
+        var multi = tabuada(numTabuada,multiplicador);
+        mostra(numTabuada + " vezes " + multiplicador + " é igual a " + multi + ".");
+    }
+
+</script>

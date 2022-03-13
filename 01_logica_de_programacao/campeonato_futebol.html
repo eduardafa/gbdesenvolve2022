@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+    function calculaPontos(vitorias,empates) {
+        var pontos = (vitorias*3)+empates;
+        return pontos;
+    }
+
+    var vitoriasTime1 = parseInt(prompt("Quantos jogos o CDCFC venceu?"));
+    var empatesTime1 = parseInt(prompt("Quantos jogos o CDCFC empatou?"));
+    var vitoriasTime2 = parseInt(prompt("Quantos jogos o time adversário venceu?"));
+    var empatesTime2 = parseInt(prompt("Quantos jogos o time adversário empatou?"));
+    var pontosTime1 = calculaPontos(vitoriasTime1,empatesTime1);
+    var pontosTime2 = calculaPontos(vitoriasTime2,empatesTime2); 
+
+    mostra("Nosso time tem " + pontosTime1 + " pontos!");
+    mostra("O time adversário tem " + pontosTime2 + " pontos!");
+
+    if (pontosTime1 > 28) {
+        mostra("Nosso time está indo MELHOR do que o esperado!");
+    }
+    if (pontosTime1 < 28) {
+        mostra("Nosso time vai PIOR do que o esperado!");
+    }
+    if (pontosTime1 == 28) {
+        mostra("Nosso time está indo bem!");
+    }
+    if (pontosTime2 > 28) {
+        mostra("O time adversário está indo MELHOR do que o esperado!");
+    }
+    if (pontosTime2 < 28) {
+        mostra("O time adversário vai PIOR do que o esperado!");
+    }
+    if (pontosTime2 == 28) {
+        mostra("O time adversário está indo bem!");
+    }
+
+</script>

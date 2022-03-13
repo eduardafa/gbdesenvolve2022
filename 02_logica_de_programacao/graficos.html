@@ -1,0 +1,56 @@
+
+<canvas width='600' height='400'></canvas>
+
+
+<script>
+
+    function drawRect(x,y,sizeX,sizeY,colors) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = colors; // para escolher a cor do preenchimento
+        pincel.fillRect(x,y,sizeX,sizeY);
+
+        pincel.strokeStyle = 'black'; // para escolher a cor do contorno
+        pincel.strokeRect(x,y,sizeX,sizeY);
+
+    }
+
+    function drawText(text,color,x,y) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.font = '20px Georgia';
+        pincel.fillStyle = color;
+        pincel.fillText(text,x,y);
+
+    }
+
+    function drawGraph (x,y,series,colors,text) {
+        drawText(text,'black',x,y-10);
+        var sumHeight = 0;
+              
+        for (var i = 0; i < series.length; i++) {
+            var height = series[i];
+            drawRect(x,y+sumHeight,50,height,colors[i]);
+            sumHeight = sumHeight + height;
+        }
+
+
+    }
+
+    var series2015 = [50, 25, 20, 5];
+    var series2016 = [65, 20, 13, 2];
+
+    var colors = ['blue','green','yellow','red'];
+
+    drawGraph(50,50,series2015,colors,'2015');
+    drawGraph(150,50,series2016,colors,'2016');
+
+
+
+
+
+</script>

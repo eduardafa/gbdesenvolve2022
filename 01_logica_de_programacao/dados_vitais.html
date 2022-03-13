@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+    
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    function calculaDias(idade) {
+        var totalDias = 365*idade;
+        // return totalDias;
+        batimentos = calculaBatimentos(totalDias);
+        function calculaBatimentos(totalDias) {
+            var batimentos = totalDias*24*60*80;
+            return batimentos;
+        }
+    }
+
+    // function calculaBatimentos(totalDias) {
+    //     var batimentos = totalDias*24*60*80;
+    //     return batimentos;
+    // }
+
+    var nome = prompt("Qual o seu nome?");
+    var idade = prompt(nome + ", qual a sua idade?");
+    dias = calculaDias(idade);
+    // batimentos = calculaBatimentos(dias);
+    // mostra("A quantidade de dias vivivos por " + nome + " é igual a " + dias);
+    mostra("Seu coração já bateu " + batimentos + " vezes. Haja coração!");
+
+</script>

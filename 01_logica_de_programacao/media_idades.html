@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function print(text) {
+        document.write(text + "<br>");
+    }
+
+    function media(accum,numPeople) {
+        return (accum/numPeople); 
+    }
+
+    var numPeople = parseInt(prompt("Quantas pessoas vão ser incluídas no cálculo da média?"));
+    var i = 0;
+    var ageAccum = 0;
+
+    for (i; i < numPeople; i++) {
+        var name = prompt("Digite o nome: ");
+        var age = parseInt(prompt("Qual a idade de " + name + "?"));
+        var ageAccum = ageAccum + age; 
+    }
+
+    var accum = ageAccum;
+    var average = media(accum,numPeople);
+
+    print("A média de idades entre as " + numPeople + " pessoas é de " + average + " anos!");
+
+</script>

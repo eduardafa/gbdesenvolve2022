@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+    // function pulaLinha() {
+    //     document.write("<br>");
+    // }
+    function mostra(texto) {
+        document.write(texto + "<br>");
+        // pulaLinha();
+    }
+
+    // function copas(anoTeste,anoInicial,intervaloCopas) {
+    //     var quantCopas = Math.round(1+(anoTeste-anoInicial)/intervaloCopas); //teve copa em 1930 tambem
+    //     return quantCopas;
+
+    // }
+
+    // function anos()
+
+    var anoInicial = parseInt(prompt("Qual o ano inicial para mostrar todo o histórico de copas?"));
+    var intervaloCopas = 4;
+    var anoTeste = parseInt(prompt("Qual o ano final para mostrar todo o histórico de copas?"));
+
+    // var quantCopas = copas(anoTeste,anoInicial,intervaloCopas);
+
+    while (anoInicial <= anoTeste) {
+        mostra(anoInicial + " tem copa!");
+        anoInicial = anoInicial + 4;
+    }
+
+
+ 
+
+
+
+</script>

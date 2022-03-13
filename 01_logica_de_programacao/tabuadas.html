@@ -1,0 +1,24 @@
+<meta charsey="UTF-8">
+
+<script>
+    //Tabuada
+    function mostra(texto) {
+        document.write(texto + "<br>");
+    }
+
+    function tabuada(num,i) {
+        var multResultado = num*i;
+        return multResultado; 
+    }
+
+    var num = parseInt(prompt("Qual a tabuada você quer ver? Digite o número referente."));
+
+    var i = 0;
+
+    mostra("<h4>Tabuada de " + num + "!</h4>"); 
+
+    while (i < 10) {
+        i = i + 1;
+        mostra(num + " vezes " + i + " é igual a " + tabuada(num,i) + ".");
+    }
+</script>

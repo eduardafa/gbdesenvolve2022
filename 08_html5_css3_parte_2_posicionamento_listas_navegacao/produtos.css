@@ -1,0 +1,104 @@
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto; /* o primeiro valor se refere a top e down, o segundo se refere a right e left */
+}
+
+nav {
+    position: absolute; /* algumas opções são: static (não altera nada), relative (defino o posicionamento em relação a um ponto de partida) e absolute (defino o ponto de partida)*/
+    top: 110px;
+    right: 0;
+
+}
+
+nav li {
+    display: inline; /* PESQUISAR SOBRE */
+    margin: 0 0 0 15px; /* ordem de instrução: top, down, right e left */
+}
+
+nav a { /* configuração dos links */
+    text-transform: uppercase; /* texto em maiusculo */
+    color: #000000;
+    font-weight: bold; /* texto em negrito */
+    font-size: 22px; /* tamanho do texto */
+    text-decoration: none; /* texto sem decoração nenhuma (antes estava sublinhado) */
+}
+
+/* PSEUDO-CLASSES DO CSS: hover e active */
+/* para o mapeamento de quando o mouse está por cima do elemento, usa-se hover (de over) */
+/* quando o mouse estiver por cima dos itens do menu de navegação */
+nav a:hover {
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0; /* espaçamento interno */
+}
+
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top; /* alinhamento baseado na linha de cima */
+    /* background: #CCCCCC; */
+    margin: 0 1.5%; /* espaçamento externo */
+    padding: 30px 20px;
+    box-sizing: border-box; /* limita dentro das dimensões da caixa */
+    /* para criar uma borda, há três elementos/aspectos essenciais: tamanho, tipo e cor */
+    /*border-color:#000000;*/
+    /*border-width: 2px; /* funciona como uma espessura */
+    /*border-style:solid;*/
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+/* para o mapeamento de quando o mouse está por cima do elemento, usa-se hover (de over) */
+.produtos li:hover {
+    border-color: #C78C19;
+}
+
+/* quando o mouse está sendo clicado (elemento com comportamento ativo) */
+.produtos li:active {
+    border-color: #088C19;
+}
+
+/* quando o mouse está em cima do elemento, alterar h2 (no exemplo abaixo) */
+.produtos li:hover h2{
+    font-size: 34px;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+
+.preco-produto {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0; /* margin-top: 10px; - mesma coisa/mesmo efeito*/
+    /* margin-top: 10px;    */
+}
+
+footer {
+    text-align: center;
+    background: url('arquivos_auxiliares/bg.jpg'); /* No CSS, para referenciar o endereço de uma imagem, usamos o valor url */
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0;
+}

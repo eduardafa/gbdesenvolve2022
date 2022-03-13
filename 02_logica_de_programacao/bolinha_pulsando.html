@@ -1,0 +1,41 @@
+<canvas width='600' height='400'></canvas>
+
+
+<script>
+
+    var canvas = document.querySelector('canvas');
+    var paint = canvas.getContext('2d');
+
+    paint.fillStyle = 'lightgrey';
+    paint.fillRect(0,0,600,400);
+
+    function drawCircle(x,y,radius, color) {
+
+        paint.fillStyle = color;
+        paint.beginPath();
+        paint.arc(x,y,radius,0,2*Math.PI);
+        paint.fill();
+    }
+
+    function clearRect() {
+        paint.clearRect(0,0,600,400);
+    }
+
+    var radius = 20;
+    var radiusMin = 20;
+    var radiusMax = 30;
+
+    function upScreen() {
+        if (radius >= radiusMin && radius <= radiusMax) {
+            radius++;
+        } else if (radius > radiusMax) {
+            radius = radius - 1;
+        }
+        clearRect();
+        drawCircle(300,200,radius,'red');
+    }
+
+    // o tempo é dado em milisegundos (5000=5seg)
+    setInterval(upScreen,100); // determina um intervalo de tempo para que uma função seja executada
+
+</script>

@@ -1,0 +1,42 @@
+<canvas width='600' height='400'></canvas>
+
+
+<script>
+
+    var canvas = document.querySelector('canvas');
+    var paint = canvas.getContext('2d');
+
+    paint.fillStyle = 'lightgrey';
+    paint.fillRect(0,0,600,400);
+
+    function drawCircle(x,y,radius) {
+
+        paint.fillStyle = 'red';
+        paint.beginPath();
+        paint.arc(x,y,radius,0,2*Math.PI);
+        paint.fill();
+    }
+
+    function clearRect() {
+        paint.clearRect(0,0,600,400);
+    }
+
+    function showConsole() {
+        console.log('Chamei função.')
+    }
+
+    var x = 20;
+    function upScreen() {
+        clearRect();
+        drawCircle(x,20,10);
+        x++;
+    }
+
+    // o tempo é dado em milisegundos (5000=5seg)
+    setInterval(upScreen,10); // determina um intervalo de tempo para que uma função seja executada
+
+
+
+    
+
+</script>

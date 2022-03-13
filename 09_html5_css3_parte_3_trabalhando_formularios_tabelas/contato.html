@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Contato - Barbearia Alura</title>
+        <link rel='stylesheet' href='reset.css'>
+        <link rel='stylesheet' href='contato.css'>
+    </head>
+
+    <body>
+        <header> <!-- tag do cabeçalho -->
+            <div class='caixa'>
+                <h1><img src='arquivos_auxiliares/logo.png' alt='Logo da barbearia Alura'></h1> <!-- a instrução alt é usada para descrever algo, nesse caso uma imagem -->
+
+                <nav> <!-- a tag <nav></nav> indica navegação -->
+                    <ul> <!-- <ul> unordered list (lista não ordenada) -->
+                        <!-- <li> list items (listar itens) -->
+                        <li><a href='index.html'>Home</a></li> <!-- a tag <a></a> vem de anchor (ancora) e é responsável por criar o link para outra pagina  -->
+                        <li><a href='produtos.html'>Produtos</a></li>
+                        <li><a href='contato.html'>Contato</a></li>
+</ul>
+                </nav>
+            </div>
+
+        </header>
+
+
+        <main>
+            <form> <!-- a tag <form></form> serve para a criação de formulários -->
+                <label for='nome-sobrenome'>Nome e sobrenome*</label> <!-- para o input, usamos uma etiqueta através da tag <label></label> -->
+                <!-- geralmente, são criados identificadores para todos os inputs, pois são informações únicas -->
+                <!-- a instrução required obriga o usuário a digitar o que é pedido -->
+                <input type='text' id='nome-sobrenome' class='input-padrao' required> <!-- a tag <input type='text'> para a criação da caixa de texto -->
+                
+                <label for='email'>E-mail*</label>
+                <input type='email' id='email' class='input-padrao' required placeholder='seuemail@dominio.com'> <!-- com a instrução placeholder, escrevemos o que vai ser exibido ao usuário até que ele preencha algo no campo -->
+
+                <label for='telefone'>Telefone*</label>
+                <input type='tel' id='telefone' class='input-padrao' required placeholder='(XX) XXXXX-XXXX'>
+
+                <label for='mensagem'>Mensagem*</label>
+                <textarea id='mensagem' class='input-padrao' cols='70' rows='10' required></textarea>
+
+                <fieldset>
+                    <!-- a tag <legend></legend> é usada para um título de um grupo de campos em qualquer formulário -->
+                    <legend>Como prefere nosso contato?</legend>
+                    <!-- A propriedade name só pode ser "preenchida" uma única vez, por isso que, quando eu seleciono um dos itens, ele desmarca o outro, mantendo somente um selecionado -->
+                    <label for='radio-email'><input id='radio-email' type='radio' name='contato' value='email'>Email</label>
+                    
+                    <label for='radio-telefone'><input id='radio-telefone' type='radio' name='contato' value='telefone'>Telefone</label>
+                    
+                    <label for='radio-whatsapp'><input id='radio-whatsapp' type='radio' name='contato' value='whatsapp' checked>Whatsapp</label> <!-- a instrução checked (marcado) deixa a opção selecionada, como sugestão ao usuário --> 
+
+                    <!-- <label for='radio-email'>Email</label>
+                    <input id='radio-email' type='radio' name='contato' value='email'>
+
+                    <label for='radio-telefone'>Telefone</label>
+                    <input id='radio-telefone' type='radio' name='contato' value='telefone'>
+
+                    <label for='radio-whatsapp'>Whatsapp</label>
+                    <input id='radio-whatsapp' type='radio' name='contato' value='whatsapp'> -->
+                    </fieldset>
+
+                <fieldset>
+                    <legend>Qual horário prefere ser atendido?</legend>
+                    <!-- para a criação de dropdown, usa-se as tags <select></select> e <option></option> -->
+                    <select>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </fieldset>
+
+                <label class='checkbox'><input type='checkbox' checked>Gostaria de receber nossas novidades por email?</label>
+
+                <input type='submit' value='Enviar formulário' class='enviar'> <!-- a tag <input type='submit'> cria o botão de enviar, o value garante o nome no botão -->
+            </form>
+
+            <table>
+                <!-- dentro da tabela há tags específicas a serem usadas como <thead></thead> e <tbody></tbody>-->
+                <!-- a tag <thead></thead> delimita o cabeçalho da tabela e deixa o que está dentro do cabeçalho centralizado -->
+                <thead>
+                    <!-- uma linha da tabela é criada através da tag <tr></tr> que vem de table row -->
+                    <tr>
+                        <!-- a tag <th></th> é usada para células do head na tabela -->
+                        <th>Dia</th>
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+                <!-- a tag <tbody></tbody> delimita o corpo da tabela -->
+                <tbody>
+                    <tr>
+                        <!-- a tag <td></td> é usada para células -->
+                        <td>Segunda-feira</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta-feira</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta-feira</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </main>
+
+        <footer> <!-- tag do rodapé -->
+            <img src='arquivos_auxiliares/logo-branco.png' alt='Logo da barbearia Alura'>
+            <p class='copyright'>&copy; Copyright Barbearia Alura - 2022</p> <!-- foi inserido o simbolo do copyright através do unicode -->
+        </footer>
+
+
+    </body>
+
+
+
+
+</html>

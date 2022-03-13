@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function a(texto) {
+
+        return "(" + texto + ")";
+            (Almeida)
+    }
+
+    function b(texto) {
+
+        return "@" + texto + "@";
+                @Flávio (Almeida)@
+    }
+
+    function c(nome, sobrenome) {
+                Flávio, Almeida
+        return b(nome + " " + a(sobrenome));
+                    Flávio (Almeida)
+    }
+
+    var resultado = c("Flávio", "Almeida");
+
+    mostra(resultado);
+
+</script>

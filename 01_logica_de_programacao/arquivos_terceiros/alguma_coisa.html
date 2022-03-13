@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h4>Digite sua idade!</h4>
+<input/>
+<br>
+<button>Enviar</button>
+
+<script>
+	var input = document.querySelector('input')
+		input.focus()
+		
+	function entrada(){
+
+		if(input.value < 18){
+			alert('Você é menor de idade, esse acesso só é permitido para maiores de 18 anos!')
+
+		}else{
+			alert('Bem vindo ao Sistema!!')
+		}
+	}
+
+
+		var botao = document.querySelector('button')
+		botao.onclick = entrada
+
+
+
+
+
+</script>

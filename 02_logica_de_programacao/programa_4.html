@@ -1,0 +1,59 @@
+
+<canvas width='600' height='400'></canvas>
+
+
+<script>
+    
+    var canvas = document.querySelector('canvas');
+    var paint = canvas.getContext('2d');
+
+    paint.fillStyle = 'grey';
+    paint.fillRect(0,0,600,400);
+
+    function drawCircle(x,y,radius,color) {
+        // var canvas = document.querySelector('canvas');
+        // var paint = canvas.getContext('2d');
+
+        paint.fillStyle = color;
+        paint.beginPath();
+        paint.arc(x,y,radius,0,2*3.14);
+        paint.fill();
+
+    }
+
+    function showCircle(event) {
+
+        var x = event.pageX - canvas.offsetLeft;
+        var y = event.pageY - canvas.offsetTop;
+
+        console.log('(' + x + ',' + y + ')');
+        var radius = 10;
+        var color = 'blue';
+        // alert('Cliquei na coordenada (' + x + ',' + y + ').');
+        drawCircle(x,y,radius,color);
+        
+    }
+
+    var colors = ['blue', 'red','green'];
+
+    canvas.onclick = showCircle;
+
+    // função para click direito do mouse
+    function changeColor(colors) {
+        // alert('Funcionou!');
+        for (var i = 0; i < colors.length; i++) {
+            var color = colors[i];
+            drawCircle(color)
+        }
+
+
+
+
+
+        return false; // false para não apresentar o menu padrão do click
+    }
+
+    canvas.oncontextmenu = changeColor;
+
+
+</script>

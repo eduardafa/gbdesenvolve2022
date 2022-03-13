@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+
+<script>
+    function mostra(texto) {
+        document.write(texto + "<br>");
+    }
+
+    var limSup = 40;
+    var i = 30;
+    
+    while (i <= limSup) {
+        if (i == 33 || i == 37) {
+            i = i + 1;
+        } else {
+            mostra(i);
+            i = i + 1;
+        }             
+    }
+    mostra("FIM");
+</script>

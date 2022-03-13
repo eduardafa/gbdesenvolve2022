@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(texto) {
+        document.write(texto)
+    }
+
+    var anoAtual = 2021;
+    var anoRef = 1500;
+    var anoGer = 28;
+    var numGeracoes = ((anoAtual-anoRef)/anoGer);
+
+    mostra("O número de gerações é " + Math.round(numGeracoes));
+    pulaLinha();
+
+
+</script>

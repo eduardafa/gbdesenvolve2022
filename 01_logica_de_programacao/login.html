@@ -1,0 +1,49 @@
+<!-- <meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+
+    if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+        alert("Bem-vindo ao sistema " + loginInformado);
+    } else {
+        alert("Login inválido. Tente novamente");
+    }
+</script> -->
+
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    // var loginInformado = prompt("Informe seu login");
+    // var senhaInformada = prompt("Informe sua senha");
+    var numTentativas = 3;
+    var tentativas = 1;
+    
+    while (tentativas <= numTentativas) {
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+            alert("Bem-vindo ao sistema " + loginInformado);
+            tentativas = numTentativas;        
+        } else {
+            if (tentativas == numTentativas) {
+                alert("Número de tentativas excedido!");
+            } else {
+                alert("Login inválido. Tente novamente");
+            }
+        }
+        tentativas = tentativas + 1;
+        //total++; //atalho para o incremento
+    }
+
+    // for (let index = 0; index < array.length; index++) {
+    //     const element = array[index];
+    // }
+</script>

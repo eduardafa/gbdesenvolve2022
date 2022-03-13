@@ -1,0 +1,40 @@
+<canvas width='600' height='400'></canvas>
+
+<script>
+
+    function drawRect(color,a,b,c,d) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = color;
+        pincel.fillRect(a,b,c,d);
+        pincel.fillStroke = 'black';
+        pincel.strokeRect(a,b,c,d);
+
+    }
+    
+    drawRect('green',0,0,50,50);
+    drawRect('red',50,0,50,50);
+    drawRect('yellow',100,0,50,50);
+
+
+    // pincel.fillStyle = 'green';
+    // pincel.fillRect(0,0,50,50);
+    // pincel.fillStroke = 'black';
+    // pincel.strokeRect(0,0,50,50);
+
+    // pincel.fillRect(50,0,50,50);
+    // pincel.strokeRect(50,0,50,50);
+
+    // pincel.fillRect(100,0,50,50);
+    // pincel.strokeRect(100,0,50,50);
+
+
+
+
+
+
+
+
+</script>

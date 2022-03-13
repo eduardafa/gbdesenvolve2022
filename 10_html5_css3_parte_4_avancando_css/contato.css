@@ -1,0 +1,146 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* declarando que a fonte de todo o site seguirá o que foi determinado aqui*/
+}
+
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto; /* o primeiro valor se refere a top e down, o segundo se refere a right e left */
+}
+
+nav {
+    position: absolute; /* algumas opções são: static (não altera nada), relative (defino o posicionamento em relação a um ponto de partida) e absolute (defino o ponto de partida)*/
+    top: 110px;
+    right: 0;
+
+}
+
+nav li {
+    display: inline; /* PESQUISAR SOBRE */
+    margin: 0 0 0 15px; /* ordem de instrução: top, down, right e left */
+}
+
+nav a { /* configuração dos links */
+    text-transform: uppercase; /* texto em maiusculo */
+    color: #000000;
+    font-weight: bold; /* texto em negrito */
+    font-size: 22px; /* tamanho do texto */
+    text-decoration: none; /* texto sem decoração nenhuma (antes estava sublinhado) */
+}
+
+/* PSEUDO-CLASSES DO CSS: hover e active */
+/* para o mapeamento de quando o mouse está por cima do elemento, usa-se hover (de over) */
+/* quando o mouse estiver por cima dos itens do menu de navegação */
+nav a:hover {
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+main {
+    width: 940px;
+    margin: 0 auto;
+
+}
+
+form {
+    margin: 40px 0;
+
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+
+.input-padrao {
+    display: block;
+    margin:0 0 20px;
+    padding: 10px 25px;
+    width: 50%; /* ocupa 50% da página */
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all; /* para transição visual do elemento */
+    cursor: pointer; /* estilo do cursor */
+}
+
+.enviar:hover {
+    background: darkorange;
+    transform: scale(1.2);
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px; /* 8px (cima e baixo) e 15px (laterais) */
+}
+
+footer {
+    text-align: center;
+    background: url('arquivos_auxiliares/bg.jpg'); /* No CSS, para referenciar o endereço de uma imagem, usamos o valor url */
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0;
+}
+
+/*******************************/
+/* aplicação de media query CSS */
+/*******************************/
+
+/* configuração CSS diferente para mobiles */
+@media screen and (max-width: 480px) {
+    .caixa {
+        width: auto;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+        text-align: center;
+    }
+    
+    label, form, fieldset, .checkbox, .enviar {
+        width: auto;
+    } 
+    
+    .input-padrao {
+        padding: 10px 0;
+    }
+   
+}

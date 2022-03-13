@@ -1,0 +1,22 @@
+
+<canvas width='600' height='400'></canvas>
+
+<script>
+
+    function drawTriangle(xa,ya,xc,yc,color) {
+        var canvas = document.querySelector('canvas');
+        var paint = canvas.getContext('2d');
+
+        paint.fillStyle = color;
+        paint.beginPath();
+        paint.moveTo(xa,ya);
+        paint.lineTo(xa,yc);
+        paint.lineTo(xc,yc);
+        paint.fill();
+    }
+
+    drawTriangle(50,50,400,400,'black');
+    drawTriangle(100,175,275,350,'white');
+
+
+</script>

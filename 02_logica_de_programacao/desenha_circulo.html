@@ -1,0 +1,32 @@
+
+<canvas width='600' height='400'></canvas>
+
+<script>
+
+
+    function drawFlower(x,y,radius,color) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x,y,radius,0,2*3.14);
+        pincel.fill();
+
+
+    }
+
+    var radius = 20;
+    var centerX = 300;
+    var centerY = 200;
+
+    // vermelho (centro)
+    drawFlower(centerX,centerY,radius,'red');
+    drawFlower(centerX,(centerY-2*radius),radius,'yellow');
+    drawFlower(centerX,(centerY+2*radius),radius,'blue');
+    drawFlower((centerX-2*radius),centerY,radius,'orange');
+    drawFlower((centerX+2*radius),centerY,radius,'black');
+
+
+
+</script>

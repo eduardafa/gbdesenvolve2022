@@ -1,0 +1,57 @@
+<canvas width='600' height='400'></canvas>
+
+
+<script>
+
+    var canvas = document.querySelector('canvas');
+    var paint = canvas.getContext('2d');
+
+    paint.fillStyle = 'lightgrey';
+    paint.fillRect(0,0,600,400);
+
+    var x = 20;
+    var y = 20;
+    // taxa de incremento aos eixos x e y
+    var delta = 10;
+
+    // codigos do teclado
+    var esquerda = 37;
+    var cima = 38;
+    var direita = 39;
+    var baixo = 40;
+
+    function drawCircle(x,y,radius) {
+
+        paint.fillStyle = 'blue';
+        paint.beginPath();
+        paint.arc(x,y,radius,0,2*Math.PI);
+        paint.fill();
+    }
+
+    function clearRect() {
+        paint.clearRect(0,0,600,400);
+    }
+
+    function upScreen() {
+        clearRect();
+        drawCircle(x,y,10);
+    }
+
+    // o tempo é dado em milisegundos (5000=5seg)
+    setInterval(upScreen,20); // determina um intervalo de tempo para que uma função seja executada
+
+    function readKey(event) {
+        if (event.keyCode == cima) {
+            y = y - delta;
+        } else if (event.keyCode == baixo) {
+            y = y + delta;
+        } else if (event.keyCode == esquerda) {
+            x = x - delta;
+        } else if (event.keyCode == direita) {
+            x = x + delta;
+        }
+    }
+
+    document.onkeydown = readKey;
+
+</script>

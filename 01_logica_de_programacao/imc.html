@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+    var altura = 1.72; /*m*/
+    var peso = 75; /*kg*/
+    var imc = peso/(altura*altura);
+
+    mostra("Meu IMC é " + imc.toFixed(2) + ".");
+
+    document.write("Testando essa droga!");
+    pulaLinha();
+    document.write("Testando ao vivo!")
+
+</script>

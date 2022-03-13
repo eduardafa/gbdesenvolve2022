@@ -1,0 +1,38 @@
+
+
+
+<canvas width='600' height='400'></canvas>
+
+<script>
+
+    function drawSquare(x,y,size,color1,color2) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = color1;
+        pincel.fillRect(x,y,size,size);
+        pincel.strokeStyle = color2;
+        pincel.strokeRect(x,y,size,size);
+    }
+
+    function drawText(text,x,y) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.font = '20px Arial'; //Georgia
+        pincel.fillStyle = 'black';
+        pincel.fillText(text,x,y);
+    }
+
+    drawText('Qual é a fração?',50,30);
+
+    var size = 100;
+
+    drawSquare(50,50,size,'green','black');
+    drawSquare(150,50,size,'green','black');
+    drawSquare(250,50,size,'green','black');
+    drawSquare(350,50,size,'white','black');
+
+
+
+</script>

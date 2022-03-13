@@ -1,0 +1,75 @@
+<canvas width='600' height='400'></canvas>
+
+<script>
+
+    var canvas = document.querySelector('canvas');
+    var paint = canvas.getContext('2d');
+
+    paint.fillStyle = 'lightgrey';
+    paint.fillRect(0,0,600,400);
+
+    var radius = 10;
+    var xAleatorio;
+    var yAleatorio;
+
+    function drawCircle(x,y,radius,color) {
+
+        paint.fillStyle = color;
+        paint.beginPath();
+        paint.arc(x,y,radius,0,2*Math.PI);
+        paint.fill();
+    }
+
+    function clearScreen() {
+        paint.clearRect(0,0,600,400);
+    }
+
+    function target(x,y) {
+        clearScreen();
+        drawCircle(x,y,radius+20,'red');
+        drawCircle(x,y,radius+10,'white');
+        drawCircle(x,y,radius,'red');
+    }
+
+    function sortPosition(max) {
+        return Math.round(Math.random()*max);
+    }
+
+    function upScreen() {
+        var xAleatorio = sortPosition(600);
+        var yAleatorio = sortPosition(400);
+        console.log(xAleatorio);
+        console.log(yAleatorio);
+        target(xAleatorio,yAleatorio);
+    }
+
+    setInterval(upScreen,5000);
+
+    function dispara(event) {
+
+        var x = event.pageX - canvas.offsetLeft;
+        var y = event.pageY - canvas.offsetTop;
+        radius = 10;
+        console.log(x);
+        console.log(y);
+
+        // lógica de acerto?
+        if ((x >= xAleatorio - radius)
+            && (x <= xAleatorio + radius)
+            && (y >= yAleatorio - radius)
+            && (y <= yAleatorio + radius)) {
+
+                alert('Acertou!');
+            }
+    }
+
+    
+    canvas.onclick = dispara;
+
+
+
+    
+
+
+
+</script>

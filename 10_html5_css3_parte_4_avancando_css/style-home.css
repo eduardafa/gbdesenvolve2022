@@ -1,0 +1,80 @@
+/* por convenção, esse body é mantido no inicio */
+body {
+    /* cor de fundo para todo o corpo do texto*/
+    
+}
+
+.titulo-principal {
+    padding: 20px;
+}
+
+#banner {
+    width: 100%;
+}
+
+.principal {
+    background: #CCCCCC;
+    padding: 30px;
+}
+
+.titulo-centralizado {
+    text-align: center;
+}
+
+p {
+    /* alinhamento de texto */
+    text-align: center;
+}
+
+/* para alterar o tamanho da fonte, usa-se o font-size e especifica-se o tamanho desejado em pixels (px) */
+/* para chamar um marcador/identificador, é usado o jogo da velha (#) */
+#missao {
+    font-size: 20px;
+}
+
+/* as cores podem ser definidas com hexadecimal (#_ _ _ _ _ _), através de RGB (0..255) ou com os nomes das cores (ex: red/green/black) */
+em strong {
+    color: #FF0000;
+}
+
+/* para classes, é usado um ponto (.classe) */
+.itens {
+    font-style: italic;
+}
+
+/* o padding (preenchimento) é responsável pelo espaçamento interno dos blocos */
+.beneficios {
+    background: #FFFFFF;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* o display possui as seguintes opções de uso: block, inline e inline-block (ocupa o tamanho do conteúdo e permite alterar largura e espaçamentos) */
+/* o alinhamento vertical permite fazer o alinhamento de acordo com um ponto de referência */
+ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+
+}
+
+.imagem-beneficios {
+    width: 50%;
+}
+
+
+footer {
+    text-align: center;
+    background: url('arquivos_auxiliares/bg.jpg'); /* No CSS, para referenciar o endereço de uma imagem, usamos o valor url */
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0;
+}

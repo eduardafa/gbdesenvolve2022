@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+    // function mostra(texto) {
+    //     document.write(texto);
+    // }
+    // var pesoDoPrimo = 83;
+    // var alturaDoPrimo = 1.76;
+    // var imcDoPrimo = pesoDoPrimo/(alturaDoPrimo*alturaDoPrimo);
+
+    // mostra("O imc do meu primo é " + imcDoPrimo);
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+    
+    function calculaIMC(altura, peso) {
+        var imc = peso/(altura*altura);
+//        mostra("O imc calculado é " + imc + ".");
+        return imc;
+
+    }
+    var pesoPrimo = 83;
+    var alturaPrimo = 1.76;
+    var imcPrimo = calculaIMC(alturaPrimo, pesoPrimo);
+    imcPrimo = imcPrimo.toFixed(2);
+    mostra("O imc do meu primo é " + imcPrimo + ".");
+    mostra("Ele está " + (imcPrimo - 18.5) + " pontos acima do limite de magreza.");
+    mostra("Ele está " + (imcPrimo - 35) + " pontos distante do limite de obesidade severa.");
+</script>

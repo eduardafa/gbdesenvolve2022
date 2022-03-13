@@ -1,0 +1,58 @@
+
+<canvas width='600' height='400'></canvas>
+
+
+<script>
+    
+    var canvas = document.querySelector('canvas');
+    var paint = canvas.getContext('2d');
+
+    paint.fillStyle = 'grey';
+    paint.fillRect(0,0,600,400);
+
+    var colors = ['blue', 'red','green'];
+    var i = 0; // indice zero, pois inicia com azul
+
+    function drawCircle(x,y,radius,color) {
+        // var canvas = document.querySelector('canvas');
+        // var paint = canvas.getContext('2d');
+
+        paint.fillStyle = color;
+        paint.beginPath();
+        paint.arc(x,y,radius,0,2*3.14);
+        paint.fill();
+
+    }
+
+    function showCircle(event) {
+
+        var x = event.pageX - canvas.offsetLeft;
+        var y = event.pageY - canvas.offsetTop;
+
+        console.log('(' + x + ',' + y + ')');
+        var radius = 10;
+        var color = colors[i];
+        console.log(colors[i]);
+        drawCircle(x,y,radius,color);
+        
+    }
+
+
+    canvas.onclick = showCircle;
+
+    // função para click direito do mouse
+    function changeColor() {
+        // alert('Funcionou!');
+        i++;
+
+        if (i >= colors.length) {
+            i = 0; // volta pra primeira cor
+        }
+        
+        return false; // false para não apresentar o menu padrão do click
+    }
+
+   canvas.oncontextmenu = changeColor; 
+
+
+</script>
