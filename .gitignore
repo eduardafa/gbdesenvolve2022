@@ -36,7 +36,12 @@ Thumbs.db
 
 # folders #
 ######################
+config
 
 # dependencies #
 ######################
 node_modules
+
+# video #
+######################
+*.mp4
