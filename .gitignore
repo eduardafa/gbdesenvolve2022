@@ -37,11 +37,14 @@ Thumbs.db
 # folders #
 ######################
 config
+imersao_dev
+alura
 
 # dependencies #
 ######################
 node_modules
 
-# video #
+# video and general files #
 ######################
 *.mp4
+*.png
